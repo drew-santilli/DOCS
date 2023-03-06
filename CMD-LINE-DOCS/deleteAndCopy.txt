@@ -1,0 +1,18 @@
+Important:
+	-rm command
+	-rm -d & rm -r
+	-mv command
+	-cp command
+
+	~ rm ~
+# We use the remove (rm) command to remove files from our machine.
+# For example, `rm app.js` would remove the app.js file.
+# Note: rm DELETES FILES, there is no undo or recycling bin to retrive from.
+
+	-i is for interactive.
+# will prompt for every deletion.
+	-I
+# Less intrusive, will still prompt.
+
+ >`cp <filename>` to copy files
+ >`cp <filename> -r` to copy directories.

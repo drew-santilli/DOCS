@@ -1,0 +1,30 @@
+Manual Sections:
+    -The manual is broken into 8 different sections,
+     each covering a specific topic in depth:
+        1. User Commands
+        2. System Calls
+        3. C Library Functions
+        4. Special Files
+        5. File Forms
+        6. Games
+        7. Miscellaneous
+        8. System Admin Commands
+                                        'man 1 sort'
+
+
+        ~ Type ~
+           -Shows which of the 4 types of commands a command is.
+        ~ Which ~
+           -Shows location of command.
+
+# There are really four types of commands:
+    *Executable Program, usually stored in /bin, /usr/
+     bin, or usr/local/bin
+        -These are compiled binary files (hince: bin)
+    *A built-in shell command
+        -These commands are part of the shell
+            -(Bash in our case)
+    *A shell function
+    *Alias
+
+

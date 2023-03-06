@@ -1,0 +1,9 @@
+                                        *Creating Files*
+
+******File
+# The file command can be used to determine the file type of a specified file.
+    -It's honestly not that important.
+# For example, running >`file contract.pdf` will tell us the file type of contract.pdf.
+    -'contract.pdf: PDF document, version 1.4'
+# Note: it does not use the file extension to "decide" on the file type.
+    -We could have a pdf file named app.png.

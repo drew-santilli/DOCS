@@ -1,0 +1,15 @@
+Important:
+
+Useful:
+
+
+Nice To Have:
+	-clear 
+	-jump linr 
+	-jump character 
+	-jump word 
+	-kill line 
+	-yank 
+	-history command
+	-history expansion
+

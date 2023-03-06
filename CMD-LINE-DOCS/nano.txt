@@ -1,0 +1,16 @@
+Important:
+
+Useful: 
+    -Opening Nano
+    -Nano Shortcuts
+
+
+Nice To Have:
+    -Configuring Nano & Spellcheck
+
+
+                            *Nano*
+# Nano is a simple text editor that we can access right from the terminal.
+# it's far more accessible than other popular command-line editors like vim and emacs.
+# Nano includes all the basic text editing functionality you would expect:
+            -Search, spellcheck, syntax highlighting, etc.

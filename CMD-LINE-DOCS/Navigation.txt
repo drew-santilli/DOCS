@@ -1,0 +1,69 @@
+                                    ******Navigation******
+Important!:
+    -pwd command
+    -ls command
+    -cd command
+    -root & home directories
+    -relative and absolute
+
+Nice To Have:
+    -overview of other folders
+
+
+*******ROOT
+# / is the root directory in UNIX operating systems.
+    -Everything is contained within root.
+# The starting point for the file system is the root folder.
+# We call it the root, but its actual directory name is `/`
+    -Confusingly, there is a sub-directory
+     named root.
+
+                                                    `xdg-open`
+                                                    -open root with GUI
+
+
+                            ~ The Home Directory ~
+# /home contains a home folder for each user on the system.
+# For example, my home folder is located at /home/drew
+
+ *SHORTHAND
+# `/` - root
+# `~` - home
+
+                `pwd` - Print Working Directory
+
+******ls
+--------
+    `ls`
+    `ls -l` - Long format. It shows more information about each file/folder.
+    `ls -a` - List only hidden files & folders that begin with .
+                -These are not normally listed.
+    `ls -la` - We can combine options!
+                -This example prints detailed information for all files, including hidden files.
+    
+
+******cd
+--------
+# The cd command is used to change the current working directory, "moving" into another directory.
+    -For example...`cd chickens` would change into chickens directory (assuming it exists.)
+        -`cd /home/drew` will take you to your home directory.
+
+
+        ~ Backing up with cd ~
+# In Unix-like operating systems, a single dot (.) is used to represent the current directory.
+# Two dots (..) represent the parent directory.
+    -We can use `cd ..` to move up one level, from our current directory into the parent directory.
+
+
+******Relative Paths
+--------------------
+# When providing paths to commands like cd or ls, we have the option of using relative or absolute paths.
+# Relative paths are paths that specify a directory/file relative to the current working directory.
+# For example, if our current directory is `/home/drew` and we want to cd into a directory named `animals` one          directory lower, we can simply run `cd animals`
+# However, this does not work if we are located in another directory.
+
+******Absolute Paths
+# Absolute paths are paths that start from the root directory (should start with a /)
+
+
+                                
