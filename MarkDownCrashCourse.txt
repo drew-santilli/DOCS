@@ -1,0 +1,45 @@
+Headings!
+
+# - h1
+## - h2
+### - h3
+#### - h4
+##### - h5
+###### - h6
+
+**bold**
+*italics*
+> I am a block quote
+>> me too
+>>> me three
+
++ Create a list by starting a line with `+` or `-` or `*`
++ Sub-lists are made by indenting 2 spaces:
+  _ Marker character changes force new list start:
+     * This is cool
+     + mucho cool
+     - wow
++ Very Easy!
+
+## Code zone
+
+`code`
+
+```
+console.log("Hello World");
+//this is a block of code
+```
+
+``` js
+console.log("Hello World");
+//this is a block of code with javascript syntax highlighting
+```
+
+
+## Links
+
+[hello there click me](www.google.com)
+
+
+## Images
+![alt-text](image-url)

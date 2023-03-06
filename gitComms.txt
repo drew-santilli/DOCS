@@ -1,0 +1,6 @@
+*****git config help*****
+git config -h
+
+//for the manual
+git help config
+
