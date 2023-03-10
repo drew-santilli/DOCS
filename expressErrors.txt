@@ -1,0 +1,43 @@
+Crucial!:
+	-Defining Custom Error Handlers
+	-Handling Async Errors
+	-Define Custom Error Class
+Important:
+	-Express' Built-in Error Handler
+	-Working With Mongoose Errors
+     ______
+Req |      | Res
+----|Errors|---->
+    |______|
+
+******Default Express Error Handlers
+# Error Handling refers to how Express catches and processes
+# errors that occur both synchronously and asynchronously.
+# Express comes with a default error handler.
+
+******404 Not Found
+	app.use((req, res) => {
+	  res.status(404).send("NOT FOUND");
+	});
+
+******Defining Custom Error Handlers
+# Define error-handling middleware functions in the same way
+# as other middleware functions, except error-handling functions
+# have four arguments instead of three:
+	app.use((err, req, res, next) => {
+	  console.error(err.stack)
+	  res.status(500).send('Something broke!')
+	})
+
+******Defining an Error Class
+# Create a new JS file for error class to be exported:
+	class AppError extends Error {
+	  constructor(message, status) {
+	    super();
+	    this.message = message;
+	    this.status = status;
+	  }
+	}
+	module.exports = AppError;
+# Then, import the error handler by requiring it:
+	const AppError = require("./AppError");
