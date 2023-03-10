@@ -1,0 +1,9 @@
+				*HISTORY*
+# Bash keeps a record command we have previously entered,
+# We can see the actual file at ~/.bash_history
+
+# You can scroll through the history one command at a time
+#  using the up and down arrows
+
+# We can also use the history command to view the entire history
+# Though, it's generally easier to manage if we pipe the output to less.
