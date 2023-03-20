@@ -1,0 +1,97 @@
+Important!:
+	-Redirecting Standard Output
+	-Redirecting Standard Input
+	-Redirecting Standard Error
+Useful:
+
+Nice To Have:
+	-Fancy Shortcut Syntax
+
+			       * Redirection *
+# standard input: 0,
+# standard output: 1,
+# standard error: 2
+
+
+
+******Standard Streams
+# The three standard streams are communication channels
+# between a computer program and its environment.
+
+# They are:
+	- Standard Input
+	- Standard Output
+	- Standard Error
+
+	~ Standard Output ~
+# Standard output is a place to which a program or command
+# can send information.
+
+# The information could go to a screen to be displayed,
+# to a file, or even to a printer or other devices.
+
+	~ Standard Error ~
+# Command and programs also have a destination to send error messages:
+	-standard error
+
+# by default, the shell directs standard error information
+# to the screen for us to read, but we can change that destination
+# if needed!
+
+	~ Standard Input ~
+# Standard input is where a program or command gets its input
+# information from.
+# By default, the shell directs standard input from the keyboard.
+
+# The input information could come from a keyboard, a file,
+# or even another command!
+
+******'redirection'
+# "redirection" describes the ways we can alter the source of 
+# standard input, and the destinations for standard output
+# and standard error.
+
+
+******redirecting output
+# The redirect output symbol (>) tells the shell to redirect the output
+# of a command to a specific file instead of the screen.
+
+# By default, the date command will print the current dat to the screen.
+# if we instead run >`date > output.txt` the output will be
+# redirected to a file called output.txt.
+
+******Appending
+# When we redirect output into a file using >, any existing contents
+# in the file are overwritten.
+# Sometimes this is not what we want!
+
+# To instead keep the existing contents in the file and add
+# new content to the end of the file, use >> when redirecting.
+	>`echo "hello" >> greeting.txt`
+	>`echo "world" >> greeting.txt`
+
+******Redirecting Input
+# to pas the contents of a file to standard input, use the
+# < symbole followed by the filename.
+
+# For example, we could pass the contents of the chickens.txt
+# file to the cat command using >`cat < chickens.txt`
+
+	~ Combo ~
+# We can redirect standard input and output at the same time!
+	`cat < original.txt > output.txt`
+# In this example, we are using cat to read in the contents
+# of original.txt and then redirecting the output to a 
+# file called output.txt
+	`sort < names.txt > sorted.txt`
+******standard error
+# by default, error messages are output to the screen, but we
+# can change this by redirecting standard error
+.
+# The standard error redirection operator is 2>
+
+# If we ran a command like cat nonexistentfile we would see an
+# error printed to the screen.
+# We can instead redirect standard error to a file with 
+	`cat nonexistentfile 2> error.txt`
+

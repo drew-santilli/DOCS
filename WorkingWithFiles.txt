@@ -1,0 +1,107 @@
+Important!:
+	-cat command
+	-less command
+	-head command
+	-tail command
+	-sort command
+
+Useful:
+	-wc command
+	-fancy sort stuff
+
+Nice To Have:
+	-tac command
+	-rev command
+
+			* WORKING WITH FILES *
+
+
+******cat
+# The cat command concatenates and prints the contents of files.
+# cat <filename> will read the contents of a file and print them out.
+# For example, >`cat instructions.txt` will read in from the instructions.txt
+# file and then print the contents out on the screen.
+
+	>`cat Todos/todo.txt`
+# If we provide cat with multiple files,
+# it will concatenate thier contents and output them.
+
+	>`cat peanutbutter.js jelly.css`
+# will output peanutbutter.js first and immediately after print jelly.css
+
+******less
+# The less command displays the contents of a file, one page at a time.
+# We can navigate forwards and backwards through the file,
+# which is especially useful with very large files.
+	>`less somefile.txt`
+	# Will display the conents of somefile.txt using less
+
+	~ less Navigation ~
+# When viewing a file using less
+	- press space or f to go to the next page of the file.
+	- pres b to go back to the previous page.
+	- press Enter or Down arrow to scroll by one line.
+	- to search, type forward slash / followed by a pattern.
+	- press q to quit.
+
+******tac
+# tac (cat spelled backwards) will concatenate and print files in reverse.
+# It prints each line of a file, starting with the last line.
+# you can think of it as a printing in reverse "vertically"
+
+
+******rev
+# The rev command prints the contents of a file,
+# revering the order of each line.
+# Think of it as a "horizontal" reverse, whereas tac is a "vertical" reverse.
+
+
+
+******head
+# The head command prints a portion of a file, 
+# starting from the beginning of a file.
+
+# By default, it prints the first 10 lines of a file.
+# >`head warAndPeace.txt` would print the first 10 lines of the
+# warAndPeace.txt file.
+
+flags: -n -c
+
+******tail
+# The tail command works similarly to the head command,
+# except it prints from the END of a file.
+# By default, it prints the last 10 lines of a file.
+
+flags: -n -c -f
+
+	~ head & tail contd ~
+# We can also specify a number of lines for head to print
+# using the -n option ( or --lines) followed by an integer.
+	>`head -n 21 warAndPeace.txt`
+# Can also :
+	>`head -3 filename.txt`
+
+
+******wc
+# The word count command can tell us the number of words,
+# lines, or bytes in files.
+# By default, it prints out three numbers:
+	# - the lines, words, and bytes in a file.
+
+# We can use the -l option to limit the output to the number of lines.
+
+# The -w option limits the output to the number of words in the file.
+
+
+******sort
+# The sort command outputs the sorted contents of a file
+# (it does not change the file itself).
+# By default, it will sort the lines of a file alphabetically.
+
+# -r to reverse
+# -n to sort by by numbers.
+# -u to ignore duplicates.
+	
+	~ Sorting by Field ~
+# We can specify a particular "column" that we want to sort by,
+# using the -k option followed by a field number.

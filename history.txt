@@ -7,3 +7,20 @@
 
 # We can also use the history command to view the entire history
 # Though, it's generally easier to manage if we pipe the output to less.
+
+	>`history`
+	>`history | less`
+
+******History Expansion
+# use a ! with the number of the command you want from the history
+	>`!1314`
+
+******Searching History
+# Ofen it's easiest to find an earlier command by searching
+#  using a small portion of the command that you remember.
+
+# Type ctrl-r to enter "reverse-i-search".
+# As you are typing, bash will search the history
+# and show you the best match.
+# Hit ctrl-r to cycle through potential matches.
+# To leave, his down-arrow

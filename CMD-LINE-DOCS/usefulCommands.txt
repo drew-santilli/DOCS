@@ -1,0 +1,2 @@
+In /var/log:
+	`tail -f syslog`

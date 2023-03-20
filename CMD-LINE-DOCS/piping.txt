@@ -1,0 +1,50 @@
+	                        * Piping *
+`ls -l /usr/bin | less`
+# This example pipes the output of ls to less.
+# The /usr/bin directory typically contains a bunch of stuff,
+# so it can be nice to use less to read the results in a more
+# managable way.
+
+******tr
+# We use the pipe character (|) to seperate two commands.
+# The output of the first command will be passed to the standard
+# input of the second command.
+
+	`cat somefile | tr s $`
+# To delete any alphabetical character using tr:
+	`cat somefile | tr -d [:alpha:]`
+
+******Working With Multiple Pipes
+	~ tac | rev ~
+# In this example, we are calling tac with a file and then piping
+# the output to rev. The final result is the content of file.txt
+# printed "horizontally" and "vertically" reversed.
+	`tac file.txt | rev`
+	~ cat | head | tail ~
+# In this example, we are using cat to feed a file to head,
+# which cuts it down to the first 7 lines of the file and passes it
+# to tail, which then outputs the last 5 lines of that "chunk".
+# The end result is lines 3-7 are output to the screen.
+	`cat file | head -7 | tail -5`
+# This example displays the 3 largest files in the current directory,
+# using ls, sort, and head.
+
+# First, ls -lh lists out all the files int eh current directory.
+# That output is passed to sort, which sorts based on the fifth field
+# (the file size).
+# The -h option is for human readable sort (comparing 100b, 40k, 1g, etc),
+# and the -r revereses the order so that we end up with the largest files
+# first.
+
+# Finally, that output is passed to headm which limits the results to the
+# first 3.
+	# This is not the prefered way to find large files!
+	# use the du command instead.
+	`ls -lh | sort -rhk 5 | head -3`
+
+******tee
+# The tee program reads standard input and copies it both
+# to standard output AND a file.
+# This allows us to capture information part of the way through a pipeline,
+# without interruptig the flow.
+	`command1 | tee file.txt | command2`
